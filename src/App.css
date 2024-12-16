@@ -1,42 +1,82 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+header {
+    background: #010618;
+    padding: 10px 0;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav {
+    display: flex;
+    justify-content: center; 
+    gap: 30px;
+    padding: 10px 20px;
+    font-size: 1.25rem;
+    align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.nav-link {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    transition: color 0.3s ease, transform 0.4s ease;
 }
 
-.card {
-  padding: 2em;
+.nav-link:hover {
+    transform: scale(1.1);
 }
 
-.read-the-docs {
-  color: #888;
+.message_container {
+    margin: 20px;
+}
+
+.message_list {
+    list-style-type: circle; 
+    font-size: 1.25rem;
+    color: darkblue;
+    cursor: pointer;
+    margin: 2rem;
+    display: flex;  
+    flex-direction: column;  
+    gap: 1rem;  
+}
+
+.message_detail {
+    margin-top: 5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: auto;
+    max-width: 60%;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f6f4f4;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.message_item a {
+    color: inherit;
+}
+
+.message_item a:hover {
+    color: rgb(12, 12, 83);
+}
+
+.message_btn {
+    background-color: #1f1576;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.message_btn:hover {
+    background-color: #03041f;
 }
