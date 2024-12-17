@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import AppLayout from "./Layout/AppLayout";
 import AboutUs from "./Pages/AboutUs";
 import ContactUs from "./Pages/ContactUS";
@@ -7,32 +7,18 @@ import MessageDetail from './Pages/MessageDetail';
 import "./App.css";
 
 const App = () => {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <AppLayout />,
-      children: [
-        {
-          path: "/",
-          element: <AboutUs />
-        },
-        {
-          path: "/Contact",
-          element: <ContactUs />
-        },
-        {
-          path: "/Message",
-          element: <MessageUs /> 
-        },
-        {
-          path: "/Message/:id",
-          element:<MessageDetail />
-        }
-      ]
-    }
-  ]);
-
-  return <RouterProvider router={router} />;
+  return (
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<AppLayout />}>
+          <Route path="/" element={<AboutUs />} />
+          <Route path="/Contact" element={<ContactUs />} />
+          <Route path="/Message" element={<MessageUs />} />
+          <Route path="/Message/:id" element={<MessageDetail />} />
+        </Route>
+      </Routes>
+    </HashRouter>
+  );
 };
 
 export default App;
