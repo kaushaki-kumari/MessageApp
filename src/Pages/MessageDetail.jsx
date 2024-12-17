@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import messages from './Messages.json';
+import messages from '../Json/messages.json';
 
 const MessageDetail = () => {
   const { id } = useParams(); 
