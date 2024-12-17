@@ -12,17 +12,15 @@ const Header = () => {
         { to: '/Message', text: 'Messages us' }
     ];
     return (
-        <>
-            <header>
-                <nav>
-                    {navLinks.map(link => (
-                        <NavLink key={link.to} to={link.to} className="nav-link" style={getlinkActive}>
-                            {link.text}
-                        </NavLink>
-                    ))}
-                </nav>
-            </header>
-        </>
+        <header>
+            <nav>
+                {navLinks.map(link => (
+                    <NavLink key={link.to} to={link.to} className="nav-link" style={getlinkActive}>
+                        {link.text}
+                    </NavLink>
+                ))}
+            </nav>
+        </header>
     );
 };
 
