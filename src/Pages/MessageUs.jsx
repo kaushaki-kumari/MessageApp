@@ -17,7 +17,7 @@ const MessageUs = () => {
         {messages.map((message, index) => (
           <li className='message_item' key={index}>
             <Link to={`/message/${index}`}>
-              Message {index}
+            {index} Message 
             </Link>
           </li>
         ))}

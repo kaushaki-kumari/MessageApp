@@ -20,7 +20,7 @@ const MessageDetail = () => {
 
   return (
     <div className='message_detail'>
-      <h2>Message {parseInt(id)}</h2>
+      <h2 className='heading'>😲😲 </h2>
       <p>{message}</p>
       <button className='message_btn' onClick={() => navigate(-1)}>Go Back</button> 
     </div>
