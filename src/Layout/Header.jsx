@@ -6,13 +6,20 @@ const Header = () => {
             color: isActive ? "#6f96e8" : "white"
         }
     }
+    const navLinks = [
+        { to: '/', text: 'About us' },
+        { to: '/Contact', text: 'Contact us' },
+        { to: '/Message', text: 'Messages us' }
+    ];
     return (
         <>
             <header>
                 <nav>
-                    <NavLink to="/" className="nav-link" style={getlinkActive}>About us</NavLink>
-                    <NavLink to="Contact" className="nav-link" style={getlinkActive}>Contact us</NavLink>
-                    <NavLink to="Message" className="nav-link" style={getlinkActive}>Messages us</NavLink>
+                    {navLinks.map(link => (
+                        <NavLink key={link.to} to={link.to} className="nav-link" style={getlinkActive}>
+                            {link.text}
+                        </NavLink>
+                    ))}
                 </nav>
             </header>
         </>
