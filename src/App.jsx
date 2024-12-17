@@ -12,9 +12,9 @@ const App = () => {
       <Routes>
         <Route path="/" element={<AppLayout />}>
           <Route path="/" element={<AboutUs />} />
-          <Route path="/Cnt" element={<ContactUs />} />
-          <Route path="/Msg" element={<MessageUs />} />
-          <Route path="/Msg/:id" element={<MessageDetail />} />
+          <Route path="/Contact" element={<ContactUs />} />
+          <Route path="/Message" element={<MessageUs />} />
+          <Route path="/Message/:id" element={<MessageDetail />} />
         </Route>
       </Routes>
     </HashRouter>
